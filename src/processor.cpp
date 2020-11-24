@@ -14,9 +14,9 @@ float Processor::Utilization() {
         linestream >>blank>>used>>used2>>used3>>idle>>idle2>>used4>>used5>>used6>>blank2>>blank3;
     }
 
-    int idletotal = stoi(idle) + stoi(idle2);
-    int nonidletotal = stoi(used) + stoi(used2) + stoi(used3) + stoi(used4) + stoi(used5) + stoi(used6);
-    float totaltime = idletotal+nonidletotal;
+    int const idletotal = stoi(idle) + stoi(idle2);
+    int const nonidletotal = stoi(used) + stoi(used2) + stoi(used3) + stoi(used4) + stoi(used5) + stoi(used6);
+    float const totaltime = idletotal+nonidletotal;
 
     return nonidletotal/totaltime;
  }

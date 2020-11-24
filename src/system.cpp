@@ -22,6 +22,9 @@ System::System() : os_(LinuxParser::OperatingSystem()), kernel_(LinuxParser::Ker
     for(int i : pids) {
         processes_.push_back(Process(i));
     }
+    
+    std::sort(processes_.begin(), processes_.end());
+    
 }
 
 // TODO: Return the system's CPU
